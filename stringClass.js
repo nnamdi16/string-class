@@ -15,6 +15,19 @@ String.prototype.toUpper = function() {
 	return output;
 }
 
+String.prototype.toLower = function() {
+	let lowerRegex = /[A-Z]/u;
+	let output = '';
+	for(let index = 0; index < this.length; index++){
+		output += this[index].replace(lowerRegex,String.fromCharCode(this[index].charCodeAt(0) + 32));
+	}
+	return output;
+}
+
+String.prototype.ucFirst = function() {
+	return this[0].toUpper() + this.substring(1,this.length);
+}
+
 
 
 module.exports = String;
