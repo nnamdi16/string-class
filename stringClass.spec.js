@@ -55,24 +55,43 @@ describe("String class Extension", function() {
 
   describe("Returns String with all characters in uppercase", function() {
     it("should return all characters to be lowercase when all characters are lowercase", function() {
-      expect('NNAMDI'.tolower()).toBe('nnamdi');
+      expect('NNAMDI'.toLower()).toBe('nnamdi');
     });
 
     it("should return all characters to be lowercase when characters are both uppercase and lowercase", function() {
-      expect('nnAmDi'.tolower()).toBe('nnamdi');
+      expect('nnAmDi'.toLower()).toBe('nnamdi');
     });
 
     it("should return empty string on empty string input", function() {
-      expect(''.tolower()).toBe('');
+      expect(''.toLower()).toBe('');
     });
 
     it("should return lowercase letters if all characters are lowercase", function() {
-      expect('nnamdi'.tolower()).toBe('nnamdi');
+      expect('nnamdi'.toLower()).toBe('nnamdi');
     });
 
    
 
   });
+  describe("Returns String with the first character as uppercase", function() {
+    it("should return the first character of a string as uppercase when all characters in the string are capital letters", function() {
+      expect('NNAMDI'.ucFirst()).toBe('NNAMDI');
+    });
 
+    it("should return only the first character of a string as uppercase when all characters in the string are lower case ", function() {
+      expect('nnamdi'.ucFirst()).toBe('Nnamdi');
+    });
+
+    it("should return only the first character of a string as uppercase when the characters in the string are both lower case and upper case", function() {
+      expect('nNaMdI'.ucFirst()).toBe('NNaMdI');
+    });
+
+    it("should return only the first character of a string as uppercase when there are more than one word that makes up a string", function() {
+      expect('nnamdi is a developer'.ucFirst()).toBe('Nnamdi is a developer');
+    });
+
+   
+
+  });
   
 });
