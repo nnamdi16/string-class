@@ -28,6 +28,10 @@ String.prototype.ucFirst = function() {
 	return this[0].toUpper() + this.substring(1,this.length);
 }
 
+String.prototype.isQuestion = function(){
+  let regexQuestion = /.+\?$/i;
+  return regexQuestion.test(this);
+}
 
 
 module.exports = String;
