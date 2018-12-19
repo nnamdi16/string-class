@@ -93,5 +93,26 @@ describe("String class Extension", function() {
    
 
   });
+
+  describe("Returns true if the string is a question", function() {
+    it("should return true if a string ends with a question mark", function() {
+      expect('Is regex very easy to implement?'.isQuestion()).toBeTruthy();
+    });
+
+    it("should return false if the string is not a question ", function() {
+      expect('Regex is simply regular expressions'.isQuestion()).toBeFalsy();
+    });
+
+    it(" should return false if the strings starts with a question mark", function() {
+      expect('?I am a boy'.isQuestion()).toBeFalsy('');
+    });
+
+    it("should return false if the strings has a question mark in between it and not at the end", function() {
+      expect('nnamdi ? is ? a ? developer'.isQuestion()).toBeFalsy('');
+    });
+
+   
+
+  });
   
 });
