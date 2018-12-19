@@ -1,0 +1,11 @@
+{
+  "name": "stringclass",
+  "version": "1.0.0",
+  "description": "Extending the string class in JavaScript using Prototype Oriented Programming, methods, procedures and instance attributes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nwabuokei Nnamdi",
+  "license": "MIT"
+}
