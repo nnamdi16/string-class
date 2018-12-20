@@ -50,6 +50,14 @@ String.prototype.wordCount = function() {
 	return this.word().length;
 }
 
+String.prototype.inverseCase = function() {
+	let output = '';
+	for(let index = 0; index < this.length; index++){
+	   output += this[index] === this[index].toUpper()?this[index].toLower():this[index].toUpper();
+	}
+	return output;
+  }
+
 
 
 
