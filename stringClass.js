@@ -58,6 +58,15 @@ String.prototype.inverseCase = function() {
 	return output;
   }
 
+String.prototype.alternateCase = function() {
+	let output = '';
+	for(let index = 0; index < this.length; index++){
+	   output += (index%2 === 0)?this[index].toLower():this[index].toUpper();
+	   
+	}
+	return output;
+}
+
 
 
 
