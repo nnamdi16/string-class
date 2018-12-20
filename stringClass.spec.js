@@ -145,11 +145,11 @@ describe("String class Extension", function() {
 
   describe("Returns each letter in the string as an inverse of its current case", function() {
     it("should return the inverse of each letter in the string with all case been uppercase", function() {
-      expect('IS REGEX VERY EASY TO IMPLEMENT'.inverseCase()).toEqual('is regex very easy to implement?');
+      expect('IS REGEX VERY EASY TO IMPLEMENT?'.inverseCase()).toEqual('is regex very easy to implement?');
     });
 
     it("should return the inverse of each letter in the string with all case been lowercase  ", function() {
-      expect('regex is simply regular expressions'.inverseCase('REGEX IS SIMPLY REGULAR EXPRESSIONS')).toEqual();
+      expect('regex is simply regular expressions'.inverseCase()).toEqual('REGEX IS SIMPLY REGULAR EXPRESSIONS');
     });
 
     it(" should return an empty string if the input is an empty string", function() {
@@ -157,7 +157,7 @@ describe("String class Extension", function() {
     });
 
     it("should return the inverse of each letter in the string with case been both lower and upper case", function() {
-      expect('nNaMdI ? is ? a ? developer'.inverseCase()).toEqual('NnAmDi');
+      expect('nNaMdI'.inverseCase()).toEqual('NnAmDi');
     });
 
   });
