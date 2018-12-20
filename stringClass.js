@@ -72,7 +72,7 @@ String.prototype.numberSelect = function(){
 }
 
 String.prototype.numberWords = function() {
-	let numWords = ['Zero','one','Two','Three','Four','Five','Six','Seven','Eight','Nine'];
+	let numWords = ['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','Nine'];
 	let output = []
 	let initOutput = String(this.numberSelect());
 	for(let index=0; index<initOutput.length; index++){
