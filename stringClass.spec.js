@@ -176,7 +176,7 @@ describe("String class Extension", function() {
     });
 
     it("should return the inverse of each letter in the string with case been both lower and upper case", function() {
-      expect('NnAmDI'.alternateCase()).toEqual('nNaMdIs');
+      expect('NnAmDI'.alternateCase()).toEqual('nNaMdI');
     });
 
   });
@@ -187,15 +187,15 @@ describe("String class Extension", function() {
     });
 
     it("should return number in words when all the inputs starts with a letter  ", function() {
-      expect('e2345'.alternateCase()).toEqual('Two Three Four Five');
+      expect('e2345'.numberWords()).toEqual('Two Three Four Five');
     });
 
     it(" should return an empty string if the input is a string", function() {
-      expect('were'.alternateCase()).toEqual(' ');
+      expect('were'.numberWords()).toEqual('  ');
     });
 
     it("should return number in words when the inputs are mixed with letters and numbers", function() {
-      expect('n12nm34'.alternateCase()).toEqual('One Two Three Four');
+      expect('n12nm34'.numberWords()).toEqual('One Two Three Four');
     });
 
   });
