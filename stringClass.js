@@ -29,9 +29,23 @@ String.prototype.ucFirst = function() {
 }
 
 String.prototype.isQuestion = function(){
-  let regexQuestion = /.+\?$/i;
-  return regexQuestion.test(this);
+	let regexQuestion = /.+\?$/i;
+	return regexQuestion.test(this);
 }
+
+String.prototype.word = function(){
+	let regexWordList = /([a-z]+)(?:\s+)/,gi;
+	let splitWord = this.split(regexWordList);
+	let output = [];
+	for(let index of splitWord){
+		if(index !== ''){
+		output.push(index);
+		}
+    }
+  	return output;
+}
+
+
 
 
 module.exports = String;
