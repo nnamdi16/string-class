@@ -83,6 +83,11 @@ String.prototype.numberWords = function() {
   
 }
 
+String.prototype.isDigit = function() {
+	return /^(-{1})?\d$/.test(this);
+  }
+  
+
 
 
 
