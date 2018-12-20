@@ -242,19 +242,19 @@ describe("String class Extension", function() {
 
   describe("Returns a number representation of the currency string", function() {
     it("should return a number representation of a currency string of numbers without decimal notation ", function() {
-      expect('11111'.toCurrency()).toEqual(11,111);
+      expect('11,111'.fromCurrency()).toEqual(11111);
     });
 
     it("should return a number representation of a currency string of number with a decimal notation ", function() {
-      expect('11111.11'.toCurrency()).toEqual(11,111.11);
+      expect('11,111.11'.fromCurrency()).toEqual(11111.11);
     });
 
     it("should return an empty string if the input is an empty string", function() {
-      expect(''.toCurrency()).toEqual('');
+      expect(''.fromCurrency()).toEqual(0);
     });
 
     it("should return Not a number for a string of numbers with both letters and numbers", function() {
-      expect('e12333'.toCurrency()).toEqual(NaN);
+      expect('e12333'.fromCurrency()).toEqual(NaN);
     });
 
   });
