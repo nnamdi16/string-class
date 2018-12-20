@@ -128,6 +128,21 @@ describe("String class Extension", function() {
 
   });
 
+  describe("Returns the number of words in the string ", function() {
+    it("should return a list of words as array ignoring whether it is uppercase or not", function() {
+      expect('Nnamdi uses the same code'.word()).toEqual(5);
+    });
+
+    it("should return a list of words as array ignoring spaces and tabs ", function() {
+      expect('Regex is simply regular    expressions'.word()).toEqual(5);
+    });
+
+    it(" should return an empty array for an empty string", function() {
+      expect(''.word()).toEqual(0);
+    });
+
+  });
+
 
   
 });
