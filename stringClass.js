@@ -34,7 +34,7 @@ String.prototype.isQuestion = function(){
 }
 
 String.prototype.word = function(){
-	let regexWordList = /([a-z]+)(?:\s+)/,gi;
+	let regexWordList = /([a-z]+)(?:\s+)/i;
 	let splitWord = this.split(regexWordList);
 	let output = [];
 	for(let index of splitWord){
