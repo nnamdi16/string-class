@@ -111,8 +111,23 @@ describe("String class Extension", function() {
       expect('nnamdi ? is ? a ? developer'.isQuestion()).toBeFalsy('');
     });
 
-   
+  });
+
+   describe("Returns a list of words in the string as an array ", function() {
+    it("should return a list of words as array ignoring whether it is uppercase or not", function() {
+      expect('Nnamdi uses the same code '.word()).toBe(['Nnamdi','uses','the', 'code']);
+    });
+
+    it("should return a list of words as array ignoring spaces and tabs ", function() {
+      expect('Regex is simply regular    expressions'.word()).toBe(['Regex','is','simply','regular','expression']);
+    });
+
+    it(" should return an empty array for an empty string", function() {
+      expect(''.word()).toBe([]);
+    });
 
   });
+
+  
   
 });
