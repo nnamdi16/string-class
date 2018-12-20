@@ -33,16 +33,21 @@ String.prototype.isQuestion = function(){
 	return regexQuestion.test(this);
 }
 
-String.prototype.word = function(){
+String.prototype.word = function() {
 	let regexWordList = /([a-z]+)(?:\s+)/i;
 	let splitWord = this.split(regexWordList);
 	let output = [];
-	for(let index of splitWord){
+	for(let index of splitWord) {
 		if(index !== ''){
 		output.push(index);
 		}
     }
   	return output;
+}
+
+
+String.prototype.wordCount = function() {
+	return this.word().length;
 }
 
 
