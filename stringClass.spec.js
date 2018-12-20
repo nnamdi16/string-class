@@ -222,15 +222,35 @@ describe("String class Extension", function() {
 
   describe("Returns a currency representation of the string", function() {
     it("should return a currency representation for a string of numbers without decimal notation ", function() {
-      expect('11,111'.toCurrency()).toEqual(11111);
+      expect('11111'.toCurrency()).toEqual('11,111');
     });
 
     it("should return a currency representation for a string of number with a decimal notation ", function() {
-      expect('11,111.11'.toCurrency()).toEqual(11111.11);
+      expect('11111.11'.toCurrency()).toEqual('11,111.11');
     });
 
-    it("should return Not a number(NaN) if the input is an empty string", function() {
-      expect(''.toCurrency()).toEqual(NaN);
+    it("should return an empty string if the input is an empty string", function() {
+      expect(''.toCurrency()).toEqual('');
+    });
+
+    it("should return Not a number for a string of numbers with both letters and numbers", function() {
+      expect('e12333'.toCurrency()).toEqual(NaN);
+    });
+
+  });
+
+
+  describe("Returns a number representation of the currency string", function() {
+    it("should return a number representation of a currency string of numbers without decimal notation ", function() {
+      expect('11111'.toCurrency()).toEqual(11,111);
+    });
+
+    it("should return a number representation of a currency string of number with a decimal notation ", function() {
+      expect('11111.11'.toCurrency()).toEqual(11,111.11);
+    });
+
+    it("should return an empty string if the input is an empty string", function() {
+      expect(''.toCurrency()).toEqual('');
     });
 
     it("should return Not a number for a string of numbers with both letters and numbers", function() {
