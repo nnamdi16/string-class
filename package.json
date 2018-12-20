@@ -4,7 +4,7 @@
   "description": "Extending the string class in JavaScript using Prototype Oriented Programming, methods, procedures and instance attributes.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jasmine"
   },
   "author": "Nwabuokei Nnamdi",
   "license": "MIT",
