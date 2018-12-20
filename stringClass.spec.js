@@ -161,5 +161,24 @@ describe("String class Extension", function() {
     });
 
   });
+
+  describe("Returns the letter in alternate case, starting with lowercase", function() {
+    it("should return alternate case when the string is uppercase", function() {
+      expect('IS REGEX VERY EASY TO IMPLEMENT?'.inverseCase()).toEqual('iS ReGeX VeRy eAsY To iMpLeMeNt?');
+    });
+
+    it("should return alternate when all cases been lowercase  ", function() {
+      expect('regex is simply regular expressions'.inverseCase()).toEqual('rEgEx iS SiMpLy rEgUlAr eXpReSsIoNs');
+    });
+
+    it(" should return an empty string if the input is an empty string", function() {
+      expect(''.inverseCase()).toEqual('');
+    });
+
+    it("should return the inverse of each letter in the string with case been both lower and upper case", function() {
+      expect('NnAmDI'.inverseCase()).toEqual('nNaMdI');
+    });
+
+  });
   
 });
