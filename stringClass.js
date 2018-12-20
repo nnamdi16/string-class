@@ -66,6 +66,12 @@ String.prototype.alternateCase = function() {
 	}
 	return output;
 }
+String.prototype.numberSelect = function(){
+	let regexNumberWords = /(\d)+/g;
+   return this.match(regexNumberWords) === null?NaN:Number(this.match(regexNumberWords).join(''))
+}
+
+
 
 
 
