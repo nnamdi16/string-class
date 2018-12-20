@@ -199,5 +199,25 @@ describe("String class Extension", function() {
     });
 
   });
+
+
+  describe("Returns true if the string is a digit(one number)", function() {
+    it("should return true for the first number if the inputs are all numbers ", function() {
+      expect('345'.isDigit()).toBeTruthy();
+    });
+
+    it("should return false if the first character is not a number ", function() {
+      expect('e2345'.isDigit()).toBeFalsy();
+    });
+
+    it(" should return false if the input is an empty string", function() {
+      expect(''.isDigit()).toBeFalsy();
+    });
+
+    it("should return true even if the input is a negative number", function() {
+      expect('-123'.numberWords()).toBeTruthy();
+    });
+
+  });
   
 });
