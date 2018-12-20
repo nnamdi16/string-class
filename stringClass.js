@@ -71,7 +71,17 @@ String.prototype.numberSelect = function(){
    return this.match(regexNumberWords) === null?NaN:Number(this.match(regexNumberWords).join(''))
 }
 
-
+String.prototype.numberWords = function() {
+	let numWords = ['Zero','one','Two','Three','Four','Five','Six','Seven','Eight','Nine'];
+	let output = []
+	let initOutput = String(this.numberSelect());
+	for(let index=0; index<initOutput.length; index++){
+	  let numPosition = initOutput[index];
+	  output.push(numWords[numPosition]);  
+	}
+	return output.join(' ');
+  
+}
 
 
 
